@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+       <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+    </head> 
+ 
+    <body>
+ 
+        <div id="app"> 
+            <p>{{ message }}</p> 
+          <button v-on:"reverseMessage" >Reverse Message</button>
+        </div> 
+ 
+        <div id="book"> 
+            <p v-if="My">This is false and won't show</p> 
+            <p v-else>This would never show.</p> 
+            <p v-show="My">This shows </p> 
+            <h3>{{title}}</h3> 
+            <p>Add your completed unit codes here:
+            <p v-for="list in lists"> 
+            {{ list.text }} 
+        </p>
+            <input  
+                placeholder= "Add unit code" 
+                v-model="newCode" 
+                @keyup.enter="addUnit"> 
+            <button v-on:click="addUnit">Click to add unit to list</button> 
+            
+        </div> 
+ 
+        <script> 
+            var app = new Vue({ 
+                el: '#app', 
+                data: { 
+                    message: 'Hello Vue.js' 
+                } 
+              methods:{
+              reverseMessage: function(){
+              this.message =this.message.reverse().join('')
+            }
+            }
+            }) 
+ 
+            var book = new Vue({ 
+                el: '#book', 
+                data: { 
+                    heading: 'This is Book', 
+                    paragraph1: 'This is some text '
+                    } 
+              methods:{
+              reverseMessage: function(){
+              this.message =this.message.reverse().join('')
+            }
+            }
+                                       
+                    }}
+                
+                } 
+               }) 
+ 
+        </script> 
+    </body> 
