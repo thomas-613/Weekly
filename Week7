@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>tree-table</title>
+<style>
+
+.t1{
+width:100px;
+height:100px;
+transition:background-color 2s,width 2s,height 2s;
+background-color:yellow;
+}
+.t1:hover{
+width:200px;
+height:200px;
+transition:background-color 2s,width 2s,height 2s;
+background-color:red;
+}
+
+.a1{
+width:100px;
+height:100px;
+background-color:yellow;
+margin-top:20px;
+animation:m 5s infinite;
+position:relative;
+}
+
+@keyframes m{
+0% {background: red; left:0px; top:0px;}
+25% {background: yellow; left:200px; top:0px;}
+50% {background: blue; left:200px; top:200px;}
+75% {background: green; left:0px; top:200px;}
+100% {background: red; left:0px; top:0px;}
+}
+</style>
+</head>
+<body>
+
+<h2>transition</h2>
+<div class="t1"></div>
+
+<h2>animation</h2>
+<div class="a1"></div>
+</body>
+<script>
+</script>
+</html>
