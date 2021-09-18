@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+    <head> 
+      <title>Vue</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" 
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+    </head> 
+    <body> 
+      <h1>Vue</h1>
+        <div id="Vue"> 
+            Length:<input type="text" v-model = 'length'>
+            Distance:<input type="text" v-model = 'distance'>
+        </div> 
+   
+        <script> 
+            var Vue =new Vue({ 
+                el:'#Vue',
+                data:{ 
+                    length: '0', 
+                    distance:'0' 
+                }, 
+                watch: { 
+                    length:function(val){ 
+                        this.length=val;
+                        this.distance=val 
+                    }, 
+ 
+                    distance:function(val){ 
+                        this.length= val; 
+                        this.distance = val 
+                     
+                }, 
+            }) 
+        </script> 
+    </body> 
+</html>
+    
+ 
